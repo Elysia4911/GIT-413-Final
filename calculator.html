@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f2f2;
+    }
+    .calculator {
+      background: #444;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .display {
+      background: #eaeaea;
+      color: black;
+      font-size: 2rem;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: right;
+      margin-bottom: 20px;
+      min-width: 240px;
+    }
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      gap: 10px;
+    }
+    button {
+      font-size: 1.2rem;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #ddd;
+    }
+    .equal {
+      background: orange;
+      color: white;
+    }
+    .equal:hover {
+      background: darkorange;
+    }
+    footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: #ccc;
+      text-align: center;
+      color: #666;
+      font-size: 0.9rem;
+      padding: 10px 0;
+      margin: 0;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+    <div class="buttons">
+      <button onclick="appendNumber('7')">7</button>
+      <button onclick="appendNumber('8')">8</button>
+      <button onclick="appendNumber('9')">9</button>
+      <button onclick="setOperation('/')">÷</button>
+
+      <button onclick="appendNumber('4')">4</button>
+      <button onclick="appendNumber('5')">5</button>
+      <button onclick="appendNumber('6')">6</button>
+      <button onclick="setOperation('*')">×</button>
+
+      <button onclick="appendNumber('1')">1</button>
+      <button onclick="appendNumber('2')">2</button>
+      <button onclick="appendNumber('3')">3</button>
+      <button onclick="setOperation('-')">−</button>
+
+      <button onclick="appendNumber('0')">0</button>
+      <button onclick="appendNumber('.')">.</button>
+      <button onclick="calculate()" class="equal">=</button>
+      <button onclick="setOperation('+')">+</button>
+    </div>
+    <div style="margin-top: 10px;">
+      <button onclick="clearDisplay()" style="width: 100%; background: #bbb;">Clear</button>
+    </div>
+  </div>
+
+  <footer>
+		
+		<p>&copy; 2025 Anthony Kim</p>
+		<p><strong>dongyeon922@gmail.com</strong></p>
+        <a href="index.html" style="position: fixed; bottom: 30px; right: 20px; z-index: 1000;">
+        <button>Go Back to Homepage</button>
+    </a>
+	</footer>
+
+  <script>
+    let display = document.getElementById('display');
+    let current = '';
+    let previous = '';
+    let operator = null;
+
+    function appendNumber(num) {
+      if (current.includes('.') && num === '.') return;
+      current += num;
+      updateDisplay();
+    }
+
+    function setOperation(op) {
+      if (current === '') return;
+      if (previous !== '') {
+        calculate();
+      }
+      operator = op;
+      previous = current;
+      current = '';
+    }
+
+    function calculate() {
+      let result;
+      const prev = parseFloat(previous);
+      const curr = parseFloat(current);
+      if (isNaN(prev) || isNaN(curr)) return;
+      switch (operator) {
+        case '+': result = prev + curr; break;
+        case '-': result = prev - curr; break;
+        case '*': result = prev * curr; break;
+        case '/': result = prev / curr; break;
+        default: return;
+      }
+      current = result.toString();
+      operator = null;
+      previous = '';
+      updateDisplay();
+    }
+
+    function clearDisplay() {
+      current = '';
+      previous = '';
+      operator = null;
+      updateDisplay();
+    }
+
+    function updateDisplay() {
+      display.textContent = current || '0';
+    }
+  </script>
+</body>
+</html>

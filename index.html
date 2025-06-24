@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GIT 413 Anthony Kim</title>
+	<meta name="author" content="Anthony Kim">
+	<meta name="description" content="GIT 413 Final Project">
+	<link rel="shortcut icon" href="images/Anthony.jpg" type="image/x-icon">
+	<link rel="icon" href="images/Anthony.jpg" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+	<script src="scripts.js" defer></script>
+</head>
+
+<body>
+	<a id="top"></a>
+	<header>
+        <a href="#top">
+			<img src="images/top.png" alt="to the top" id="top-icon">
+		</a>
+		<img src="images/darkmode.png" alt="dark mode toggle" id="dark-icon">
+
+        <div id="hero">
+			<h1>Hi, I am Anthony Kim</h1>
+			<nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Portfolios</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        	</nav>
+		</div>
+	</header>
+
+	<main>
+		<section id="about">
+			<h2>About Me</h2>
+
+
+			<div id="aboutContent">
+				<div>
+					<img src="images/Anthony.jpg" alt="Anthony Kim" id="profileImage">
+				</div>
+
+				<div>
+					<p>
+						Welcome to my portfolio! My name is Anthony Kim, and I am a student at Arizona State University, majoring in Graphic Information Technology. This website showcases my work and projects.
+					</p>
+					<p>
+						I'm a web developer with a creative mind and a competitive heart. As a proud member of Club Golf Team at ASU, I’ve learned to balance precision, focus, and teamwork both on the green field and behind the monitor screen.
+					</p>
+					<p>
+						My journey is a unique blend of athletic discipline and digital creativity. Whether I’m lining up a birdie putt or debugging a responsive layout, I approach every challenge with drive and dedication. Through web development, I’ve found a space where I can build, express, and constantly grow — just like I do in golf.
+					</p>
+					<p>
+						I believe in the harmony of motion and logic — where athletic energy meets design thinking, and where passion fuels performance. This portfolio showcases not just my technical skills, but the spirit of balance, grit, and curiosity that defines me.
+					</p>
+				</div>
+			</div>
+
+			
+			<br>
+			<p id="quote"><em>"Code with passion. Swing with purpose."</em></p>
+			
+			
+			<div id='golf'></div>
+		</section>
+
+		<section id="products">
+			<h2>My Portfolios</h2>
+		
+			<div id="productDisplay">
+				<!-- Product 1: Classic -->
+				<article class="product" id="classicProduct">
+					<a href="todolist.html">
+						<img src="images/스크린샷 2025-06-24 065914.png" alt="" width="512" height="512">
+					</a>
+					<h3>To-Do List</h3>
+					<p>A simple and intuitive to-do list app to help you organize your daily tasks efficiently.</p>
+				</article>
+		
+				<!-- Product 2: Zero -->
+				<article class="product hide" id="zeroProduct">
+					<a href="calculator.html">
+						<img src="images/스크린샷 2025-06-24 064409.png" alt="" width="512" height="512">
+					</a>
+					<h3>Calculator</h3>
+					<p>Simple web-based calculator app.</p>
+				</article>
+		
+				<!-- Product 3: Cherry -->
+				<article class="product hide" id="cherryProduct">
+					<a href="Carver.html">
+						<img src="images/스크린샷 2025-06-24 061917.png" alt="" width="512" height="512">
+					</a>
+					<h3>UI/UX Optimization</h3>
+					<p>This website is an improved version of an existing e-commerce page, enhanced with better design and user experience features. It showcases my ability to manipulate website that ins't mine.</p>
+					<br>
+					<p>Improvements</p>	
+					<p>1. Star Rating / 2. FAQ / 3. User Reviews</p>
+					<p><a href="https://carverskateboards.com/carver-x-free-easy-cx-raw-30-75-paleta-surfskate-complete/">Go to the original website for a comparison.</a></p>
+				</article>
+			</div>
+		
+			<div id="productButtons">
+				<button id="classicBtn">To-Do List</button>
+				<button id="zeroBtn">Calculator</button>
+				<button id="cherryBtn">UI/UX</button>
+			</div>
+			<br>
+			<strong>Click on the images above to view my portfolios.</strong>
+		</section>
+
+
+		<section id="play">
+			<h2>Play and Win</h2>
+			
+			<p>Win a free box of Coca-Cola!</p>
+			<br>
+			<p>Enter a Number between 1 and 10 in the form. We will generate a random number. <br> If your number matches, you win!</p>
+			<br>
+		
+			<form id="gameForm">
+				<label for="userGuess">Enter a Number Between 1 and 10:</label>
+				<input type="number" id="userGuess" min="1" max="10">
+				<button type="submit" id="guessButton">Take a Guess!</button>
+			</form>
+		
+			<div id="gameResult">
+				<p id="resultMessage">Play Now!</p>
+				<p id="yourGuess"></p>
+				<p id="winningNumber"></p>
+			</div>
+		</section>
+		
+
+		<section id="contactForm">
+			<h2>Send Me a Message</h2>
+			<form id="contactCocaCola" action="https://wp.zybooks.com/form-viewer.php" method="POST" target="_blank">
+				<label for="fName">Full Name (first and last): <span class="required">*</span></label>
+				<input type="text" name="fName" id="fName">
+				<span id="fNameError" class="error hide">First and Last Name are required</span>
+
+				<label for="number">Phone Number: <span class="required" id="telReq">*</span></label>
+				<input type="tel" name="number" id="number">
+				<span id="telError" class="error hide">Phone number is required</span>
+
+				<label for="email">Email:<span class="required" id="emailReq"></span></label>
+				<input type="email" name="email" id="email">
+				<span id="emailError" class="error hide">Email is required</span>
+
+				<fieldset>
+					<legend>Preferred Method Of Contact <span class="required">*</span></legend>
+					<label for="prefPhone" class="custom-radio">
+						<input type="radio" name="contact-pref" id="prefPhone" value="Phone" required checked> Phone
+					</label>
+
+					<label for="prefEmail" class="custom-radio">
+						<input type="radio" name="contact-pref" id="prefEmail" value="Email"> Email
+					</label>
+				</fieldset>
+
+				<label for="message">Your Message: <span class="required">*</span></label>
+				<textarea id="message" name="message"></textarea>
+				<span id="commentError" class="error hide">Comments are required</span>
+
+				<input type="submit" id="mySubmit" value="Submit">
+			</form>
+
+			<!-- Modal Structure -->
+			<div id="thanksModal" class="hide">
+				<div id="modalContent">
+				  <button id="modalCloseBtn">X</button>
+				  <h3>Thank You For Your Message!</h3>
+				  <p>Full Name: <span id="modalName"></span></p>
+				  <p>Preferred Method of Contact: <span id="modalContact"></span></p>
+				  <p>Email: <span id="modalEmail"></span></p>
+				  <p>Phone #: <span id="modalPhone"></span></p>
+				  <p>Message: <span id="modalComments"></span></p>
+				  <br>
+				  <p>I will get back to you as soon as possible!</p>
+				  <p>Have a great day!</p>
+				</div>
+			  </div>			  	
+  
+		</section>
+	</main>
+
+	<footer>
+		<h3>Find Me on Social Media</h3>
+		<a href="https://www.instagram.com/dkim_922/" aria-label="Instagram" target="_blank">
+			<img src="images/instagram.svg" alt="Instagram Icon" class="social-icons">
+		</a>
+		<a href="https://www.linkedin.com/in/dongyeon-kim-440767253/" aria-label="LinkedIn" target="_blank">
+			<img src="images/linkedin-svgrepo-com.svg" alt="LinkedIn Icon" class="social-icons">
+		</a>
+		<a href="https://www.facebook.com/dongyeon.kim.870917" aria-label="Facebook" target="_blank">
+			<img src="images/facebook.svg" alt="Facebook Icon" class="social-icons">
+		</a>
+		
+		<a href="mailto:dongyeon922@gmail.com" aria-label="Email" target="_blank">
+			<img src="images/email-svgrepo-com.svg" alt="email Icon" class="social-icons">
+		</a>
+		
+		
+		<p>&copy; 2025 Anthony Kim</p>
+		<p><strong>dongyeon922@gmail.com</strong></p>
+	</footer>
+</body>
+</html>
