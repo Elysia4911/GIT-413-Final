@@ -88,19 +88,25 @@
 </head>
 <body>
   <div class="todo-container">
+  
+
+  <label for="memo"><strong>📝 Memo:</strong></label><br />
+  <textarea id="memo" rows="4" style="width: 380px; height: 120px; margin: 15px 0;" placeholder="Write a quick note..."></textarea>
     <h2>📋 To-Do Lists</h2>
-    <div>
-      <input type="text" id="taskInput" placeholder="Add a task..." />
-      <button onclick="addTask()">Add</button>
-    </div>
-    <ul id="taskList"></ul>
+  <div>
+    <input type="text" id="taskInput" placeholder="Add a task..." />
+    <button onclick="addTask()">Add</button>
   </div>
+  <ul id="taskList"></ul>
+</div>
+
 
   <footer>
 		
 		<p>&copy; 2025 Anthony Kim</p>
 		<p><strong>dongyeon922@gmail.com</strong></p>
-        <a href="index.html" style="position: fixed; bottom: 30px; right: 20px; z-index: 1000;">
+      
+    <a href="index.html" style="position: fixed; bottom: 30px; right: 20px; z-index: 1000;">
         <button>Go Back to Homepage</button>
     </a>
 	</footer>
@@ -151,6 +157,14 @@
       saveTasks();
       renderTasks();
     }
+
+    // Memo Save/Load
+    const memoBox = document.getElementById('memo');
+    memoBox.value = localStorage.getItem('memo') || '';
+    memoBox.addEventListener('input', () => {
+      localStorage.setItem('memo', memoBox.value);
+    });
+
 
     // Initial render
     renderTasks();
