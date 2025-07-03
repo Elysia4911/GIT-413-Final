@@ -18,6 +18,13 @@
 <body>
 	<a id="top"></a>
 	<header>
+		<nav id="mainNav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Portfolios</a></li>
+                <li><a href="#contactForm">Contact</a></li>
+            </ul>
+        </nav>
         <a href="#top">
 			<img src="images/top.png" alt="to the top" id="top-icon">
 		</a>
@@ -25,13 +32,6 @@
 
         <div id="hero">
 			<h1>Hi, I am Anthony Kim</h1>
-			<nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#products">Portfolios</a></li>
-                <li><a href="#contactForm">Contact</a></li>
-            </ul>
-        	</nav>
 		</div>
 	</header>
 
@@ -49,12 +49,15 @@
 					<p>
 						Welcome to my portfolio! My name is Anthony Kim, and I am a student at Arizona State University, majoring in Graphic Information Technology. This website showcases my work and projects.
 					</p>
+					<br>
 					<p>
 						I'm a web developer with a creative mind and a competitive heart. As a proud member of Club Golf Team at ASU, I’ve learned to balance precision, focus, and teamwork both on the green field and behind the monitor screen.
 					</p>
+					<br>
 					<p>
 						My journey is a unique blend of athletic discipline and digital creativity. Whether I’m lining up a birdie putt or debugging a responsive layout, I approach every challenge with drive and dedication. Through web development, I’ve found a space where I can build, express, and constantly grow — just like I do in golf.
 					</p>
+					<br>
 					<p>
 						I believe in the harmony of motion and logic — where athletic energy meets design thinking, and where passion fuels performance. This portfolio showcases not just my technical skills, but the spirit of balance, grit, and curiosity that defines me.
 					</p>
@@ -75,33 +78,39 @@
 			<div id="productDisplay">
 				<!-- Product 1: Classic -->
 				<article class="product" id="classicProduct">
-					<a href="todolist.html">
-						<img src="images/스크린샷 2025-06-24 065914.png" alt="" width="512" height="512">
-					</a>
+					<div id="todoIframeContainer">
+						<iframe src="todolist.html" width="512" height="512" style="border:none;"></iframe>
+					</div>
 					<h3>To-Do List</h3>
 					<p>A simple and intuitive to-do list app to help you organize your daily tasks efficiently.</p>
 				</article>
 		
 				<!-- Product 2: Zero -->
 				<article class="product hide" id="zeroProduct">
-					<a href="calculator.html">
-						<img src="images/스크린샷 2025-06-24 064409.png" alt="" width="512" height="512">
-					</a>
+					<div id="calculatorIframeContainer">
+						<iframe src="calculator.html" width="512" height="512" style="border:none;"></iframe>
+					</div>
 					<h3>Calculator</h3>
 					<p>Simple web-based calculator app.</p>
 				</article>
 		
 				<!-- Product 3: Cherry -->
 				<article class="product hide" id="cherryProduct">
-					<a href="Carver.html">
-						<img src="images/스크린샷 2025-06-24 061917.png" alt="" width="512" height="512">
-					</a>
+					<iframe src="Carver.html" width="100%" height="800px" style="border:none;"></iframe>
+
+					<p>
+						<a href="https://carverskateboards.com/carver-x-free-easy-cx-raw-30-75-paleta-surfskate-complete/" target="_blank" rel="noopener noreferrer">
+							View the Orinial Carver Skateboards Product Page
+						</a>
+					</p>
+					<br>
+
 					<h3>UI/UX Optimization</h3>
-					<p>This website is an improved version of an existing e-commerce page, enhanced with better design and user experience features. It showcases my ability to manipulate website that ins't mine.</p>
+					<p>This website is an improved version of an existing e-commerce page, enhanced with better design and user experience features. <br> It showcases my ability to manipulate website that ins't mine.</p>
 					<br>
 					<p>Improvements</p>	
 					<p>1. Star Rating / 2. FAQ / 3. User Reviews</p>
-					<p><a href="https://carverskateboards.com/carver-x-free-easy-cx-raw-30-75-paleta-surfskate-complete/">Go to the original website for a comparison.</a></p>
+					
 				</article>
 			</div>
 		
@@ -110,8 +119,7 @@
 				<button id="zeroBtn">Calculator</button>
 				<button id="cherryBtn">UI/UX</button>
 			</div>
-			<br>
-			<strong>Click on the images above to view my portfolios.</strong>
+			
 		</section>
 
 
