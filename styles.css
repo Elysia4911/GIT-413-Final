@@ -34,13 +34,13 @@ nav ul li {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     font-style: italic;
 }
 
 nav {
-    padding: 20px 0;
+    padding: 10px 0;
     position: relative;
     top: 50vh;
 }
@@ -51,7 +51,6 @@ nav ul li a {
     font-weight: bold;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1.5em;
-    font-size: 3em;
 }
 
 /* Hero Image */
@@ -79,7 +78,7 @@ nav ul li a {
 /* Fixed Buttons (Dark Mode and Top) */
 #dark-icon, #top-icon {
     position: fixed;
-    bottom: 20px;
+    top: 0;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -89,8 +88,8 @@ nav ul li a {
 }
 
 #top-icon {
-    right: 20px;
-    bottom: 80px;
+    left: 20px;
+    top: 0;
     z-index: 1000;
 }
 
@@ -129,7 +128,8 @@ h2 {
 /* About Section */
 #about {
     text-align: center;
-    margin: 40px 0;
+    margin: 50px 0;
+    padding-top: 150px;
 }
 
 #quote {
@@ -170,6 +170,7 @@ h2 {
 #products {
     text-align: center;
     margin: 100vh 0 50px;
+    padding-top: 150px;
 }
 
 #productDisplay img {
@@ -251,7 +252,8 @@ h2 {
 /* Contact Form */
 #contactForm {
     padding: 30px;
-    margin: 40px auto;
+    margin: 50px auto;
+    margin-top: 200px;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
